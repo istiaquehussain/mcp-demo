@@ -1,0 +1,14 @@
+{
+    "order-service": {
+        "transport": "sse", 
+        "url": "http://localhost:8070/os/api/v1/mcp/sse"
+    },
+    "user-service": {
+        "transport": "sse", 
+        "url": "http://localhost:8090/us/api/v1/mcp/sse"
+    },
+    "email-service": {
+        "url": "http://localhost:8000/mcp", 
+        "transport": "streamable_http"
+    }
+}

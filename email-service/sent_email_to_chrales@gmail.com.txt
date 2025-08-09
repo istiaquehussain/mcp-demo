@@ -1,0 +1,6 @@
+To: chrales@gmail.com
+Order Details: Order ID: ORD-009
+Details: Lenovo ThinkPad X1 Carbon Gen 10, 14-inch FHD, Intel Core i7, 16GB RAM, 1TB SSD
+
+Order ID: ORD-0010
+Details: Amazon Kindle Paperwhite, 11th Gen, Waterproof, 8GB Storage
