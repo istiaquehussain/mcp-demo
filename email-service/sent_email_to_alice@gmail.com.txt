@@ -1,5 +1,0 @@
-To: alice@gmail.com
-Order Details: Here are your order details:
-
-ORD-005: Dell XPS 13, 13.4-inch FHD+ Touchscreen, Intel Core i7, 16GB RAM, 512GB SSD
-ORD-006: Apple Watch Series 8, 45mm, GPS + Cellular, Midnight Aluminum Case with Midnight Sport Band
