@@ -5,3 +5,4 @@ langchain-mcp-adapters
 mcp
 langgraph
 streamlit
+langsmith

@@ -32,7 +32,7 @@ public class UserService {
         return user.getUserId();
         
     }
-
+    
     @Tool(name = "getUserIdForLastName", description = "Retrieves user id for a given user last name")
     public String getUserIdForLastName(String lastName) {
         if (users == null || users.isEmpty()) {
@@ -68,4 +68,5 @@ public class UserService {
         }
         return user.getEmail();
     }
+    
 }
