@@ -1,3 +1,60 @@
+This project is setup for a demo of MCP. It includes sample implementation of 
+1. Spring based MCP server UserManagementService 
+2. Spring based MCP server OrderManagementService
+3. Python based MCP server email-service
+4. Python base MCP client 
+
+-------------------------UserManagementService-----------------------------------------
+This provides a sample spring based MCP server implemetaion . The source path location ./UserManagementService. 
+It provides 4 functions (In MCP world they are called tools)
+
+1. getUserIdForFirstName(String firstName) // Retrieves user id for a given user first name
+2. getUserIdForLastName(String lastName) //Retrieves user id for a given user last name
+3. getUserIdForEmail(String email)  // Retrieves user id for a given user email address or email id
+4. getEmailForUserId(String userId)  // Retrieves user email address for a given user id
+
+Sample user records serves by UserManagementService
+
+("user1", "John", "Doe", "john@gmail.com"),
+("user2", "Jane", "Smith", "jane@gmai.com"),
+("user3", "Alice", "Johnson", "alice@gmail.com"),
+("user4", "Bob", "Brown", "brown@gmail.com"),
+("user5", "Charlie", "Davis", "chrales@gmail.com")
+
+
+
+-------------------------OrderManagementService-----------------------------------------
+This provides a sample spring based MCP server implemetaion . The source path location ./OrderManagementService. 
+It provides 2 tools
+
+1. getAllOrdersForUserId(String userId) // Retrieves all orders for a given user ID
+2. getOrderDetailsForOrderId(String orderId) //Retrieves order details for a given order ID
+
+Sample order records serves by UserManagementService
+
+("ORD-001", "user1", "MACBook Pro 16-inch 2023 , M2 Pro, 12-Core CPU, 19-Core GPU, 16GB RAM, 1TB SSD"),
+("ORD-002", "user1", "iPhone 15 Pro Max, 256GB, Space Black"),
+("ORD-003", "user2", "Samsung Galaxy S23 Ultra, 512GB, Phantom Black"),
+("ORD-004", "user2", "Sony WH-1000XM5 Wireless Noise Cancelling Headphones"),
+("ORD-005", "user3", "Dell XPS 13, 13.4-inch FHD+ Touchscreen, Intel Core i7, 16GB RAM, 512GB SSD"),
+("ORD-006", "user3", "Apple Watch Series 8, 45mm, GPS + Cellular, Midnight Aluminum Case with Midnight Sport Band"),
+("ORD-007", "user4", "Google Pixel 7 Pro, 128GB, Obsidian"),
+("ORD-008", "user4", "Bose QuietComfort 45 Wireless Noise Cancelling Headphones"),
+("ORD-009", "user5", "Lenovo ThinkPad X1 Carbon Gen 10, 14-inch FHD, Intel Core i7, 16GB RAM, 1TB SSD"),
+("ORD-0010", "user5", "Amazon Kindle Paperwhite, 11th Gen, Waterproof, 8GB Storage")
+
+-------------------------email-service-----------------------------------------
+This provides a sample Python MCP server implemetaion . The source path location ./email-service. 
+It provides 1 tool
+
+send_email(toEmailAddress: str, orderDeatils: str) // Sends an email with the specified ordersDetails to the given recipient email address
+
+
+
+
+
+
+
 ------------------------------------------------------------------
 To test mcp server use
 npx @modelcontextprotocol/inspector
@@ -5,7 +62,7 @@ Note: if npx does not run in your machine please install npx using Node e.g . "b
 ------------------------------------------------------------------
 
 ------------------------------------------------------------------
-urs for mcp server 
+urls for mcp server 
 
 1. order-service:
 http://localhost:8070/os/api/v1/mcp/sse
