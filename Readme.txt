@@ -50,7 +50,43 @@ It provides 1 tool
 send_email(toEmailAddress: str, orderDeatils: str) // Sends an email with the specified ordersDetails to the given recipient email address
 
 
+----------------Steps to run servers and client ----------------------
+1. Sofrware requiremnts 
+  - java 24 (if others say v 21 you need to update the ./UserManagementService/pom.xml and ./OrderManagementService/pom.xml in project->properties->java.version value)
+  - maven      
+  - Python 3.13 +
+  - optional Node js to run universal mcp inspector
+2. run OrderManagementService
+    - open terminal 
+    - cd ./OrderManagementService
+    - ./mvnw spring-boot:run
+3. run UserManagementService
+    - open terminal 
+    - cd ./UserManagementService
+    - ./mvnw spring-boot:run
+4. run mcp service in python 
+    - cd ./email-service
+    - python3 -m venv .venv
+    - source ./.venv/bin/activate
+    - pip3 install -r requiments.txt 
+    - python3 ./email_service.py
+5. optional test MCP Servers using universal MCP inspector
+    - install npx using Node
+    - ./npx @modelcontextprotocol/inspector
+    - testing urls 
+        a. order-service:
+        http://localhost:8070/os/api/v1/mcp/sse
+        b. user-service
+        http://localhost:8090/us/api/v1/mcp/sse
+        c. email-service
+        http://localhost:8000/mcp
+        
 
+
+
+
+
+ 
 
 
 
