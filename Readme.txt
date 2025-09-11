@@ -88,6 +88,14 @@ send_email(toEmailAddress: str, orderDeatils: str) // Sends an email with the sp
    - source ./.venv/bin/activate
    - pip3 install -r requiments.txt
    - streamlit run ./chat_app.py
+    run query like  
+      my first name is John, what is my use id
+      for user id user2 list all orders 
+      can you show deatils for order ORD-007
+      my first name is Bob can you list all orders 
+      can you email order details for user id user5
+      can you email details for first name Alice
+
         
 
 
