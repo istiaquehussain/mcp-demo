@@ -1,11 +1,11 @@
-This project is setup for a demo of MCP. It includes sample implementation of 
-1. Spring based MCP server UserManagementService 
-2. Spring based MCP server OrderManagementService
-3. Python based MCP server email-service
-4. Python base MCP client 
+This project is set up for a demo of MCP. It includes a sample implementation of 
+1. UserManagementService - a Spring-based MCP server 
+2. OrderManagementService - a Spring-based MCP server 
+3. email-service - a Python-based MCP server 
+4. Python based MCP client 
 
 -------------------------UserManagementService-----------------------------------------
-This provides a sample spring based MCP server implemetaion . The source path location ./UserManagementService. 
+This provides a sample spring based MCP server implementaion . The source path location ./UserManagementService. 
 It provides 4 functions (In MCP world they are called tools)
 
 1. getUserIdForFirstName(String firstName) // Retrieves user id for a given user first name
@@ -51,7 +51,7 @@ send_email(toEmailAddress: str, orderDeatils: str) // Sends an email with the sp
 
 
 ----------------Steps to run servers and client ----------------------
-1. Sofrware requiremnts 
+1. Software requirements  
   - java 24 (if others say v 21 you need to update the ./UserManagementService/pom.xml and ./OrderManagementService/pom.xml in project->properties->java.version value)
   - maven      
   - Python 3.13 +
@@ -81,7 +81,7 @@ send_email(toEmailAddress: str, orderDeatils: str) // Sends an email with the sp
         c. email-service: protocol - streamable HTTP
         http://localhost:8000/mcp
 6. run and test client 
-   Note : In order to test the fucntionalityly without any cost We are using xxx model though groq intefencing . Please loging to https://groq.com/ and generate a API key 
+   Note: To test the functionality without any cost, we are using qwen/qwen3-32b model through Groq inference. Please log in to https://groq.com/ and generate an API key 
    - cd ./client
    - edit .env file to replace with your GROQ API KEY
    - python3 -m venv .venv
@@ -91,7 +91,7 @@ send_email(toEmailAddress: str, orderDeatils: str) // Sends an email with the sp
     run query like  
       my first name is John, what is my use id
       for user id user2 list all orders 
-      can you show deatils for order ORD-007
+      can you show details for order ORD-007
       my first name is Bob can you list all orders 
       can you email order details for user id user5
       can you email details for first name Alice
