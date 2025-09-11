@@ -70,16 +70,24 @@ send_email(toEmailAddress: str, orderDeatils: str) // Sends an email with the sp
     - source ./.venv/bin/activate
     - pip3 install -r requiments.txt 
     - python3 ./email_service.py
-5. optional test MCP Servers using universal MCP inspector
+5. (optional) test MCP Servers using universal MCP inspector
     - install npx using Node
-    - ./npx @modelcontextprotocol/inspector
+    - npx @modelcontextprotocol/inspector
     - testing urls 
-        a. order-service:
+        a. order-service: protocol - SSE
         http://localhost:8070/os/api/v1/mcp/sse
-        b. user-service
+        b. user-service: protocol - SSE
         http://localhost:8090/us/api/v1/mcp/sse
-        c. email-service
+        c. email-service: protocol - streamable HTTP
         http://localhost:8000/mcp
+6. run and test client 
+   Note : In order to test the fucntionalityly without any cost We are using xxx model though groq intefencing . Please loging to https://groq.com/ and generate a API key 
+   - cd ./client
+   - edit .env file to replace with your GROQ API KEY
+   - python3 -m venv .venv
+   - source ./.venv/bin/activate
+   - pip3 install -r requiments.txt
+   - streamlit run ./chat_app.py
         
 
 
