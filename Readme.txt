@@ -96,6 +96,12 @@ send_email(toEmailAddress: str, orderDeatils: str) // Sends an email with the sp
       can you email order details for user id user5
       can you email details for first name Alice
 
+
+----------------step To test mcp server use----------------
+npx @modelcontextprotocol/inspector
+Note: if npx does not run in your machine please install npx using Node e.g . "brew install Node" 
+
+
         
 
 
